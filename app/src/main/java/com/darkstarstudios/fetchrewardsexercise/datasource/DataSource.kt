@@ -10,14 +10,11 @@ import okhttp3.OkHttpClient
 import okhttp3.Request
 import okhttp3.Response
 
-
 class DataSource() {
 
-    fun fetchRewards(url: String, onResult: (List<Reward>?) -> Unit) {
+    fun fetchRewards(url: String, onResult: (List<Reward>?) -> Unit, client: OkHttpClient = OkHttpClient()) {
         CoroutineScope(Dispatchers.IO).launch {
             try {
-                val client = OkHttpClient()
-
                 val request = Request.Builder().url(url).build()
                 val response: Response = client.newCall(request).execute()
                 if (response.isSuccessful) {

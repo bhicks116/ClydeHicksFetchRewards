@@ -1,4 +1,4 @@
-package com.darkstarstudios.fetchrewardsexercise
+package com.darkstarstudios.fetchrewardsexercise.util
 
 import com.darkstarstudios.fetchrewardsexercise.model.Reward
 
@@ -21,7 +21,8 @@ object SoftFilter {
     fun sort(rewards: List<Reward>,
              orderBy: SORT_ORDER = SORT_ORDER.ASCENDING,
              sortBy: SORT_BY = SORT_BY.LIST_ID_THEN_NAME,
-             filterBy: FILTER_BY = FILTER_BY.NOT_EMPTY) : Map<Int, List<Reward>> {
+             filterBy: FILTER_BY = FILTER_BY.NOT_EMPTY
+    ) : Map<Int, List<Reward>> {
         val filteredRewards = rewards.filter {
                 if (filterBy == FILTER_BY.NOT_EMPTY)
                     it.name != null && it.name.isNotEmpty()

@@ -1,11 +1,8 @@
 package com.darkstarstudios.fetchrewardsexercise.ui
 
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.darkstarstudios.fetchrewardsexercise.SoftFilter
+import com.darkstarstudios.fetchrewardsexercise.util.SoftFilter
 import com.darkstarstudios.fetchrewardsexercise.datasource.DataSource
 import com.darkstarstudios.fetchrewardsexercise.model.Reward
 import kotlinx.coroutines.Dispatchers
